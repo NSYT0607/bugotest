@@ -20,7 +20,7 @@ def answer(request):
     received_json_data = json.loads(json_str)
     datacontent = received_json_data['content']
 
-    if datacontent == 'Comment tu t\'appelles?':
+    if datacontent == ('Comment tu t\'appelles?' or'Tu t\'appelles comment?'):
         today = "Je m'appelle 상연."
 
         return JsonResponse({
@@ -29,7 +29,7 @@ def answer(request):
                 }
             })
 
-    elif datacontent == 'Tu es d\'où?':
+    elif datacontent == 'Tu es d\'où?' or datacontent == 'Tu viens d\'où?' :
         tomorrow = "Je suis de Séoul."
 
         return JsonResponse({
