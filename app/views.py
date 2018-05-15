@@ -10,8 +10,7 @@ import json
 def keyboard(request):
 
     return JsonResponse({
-        'type':'buttons',
-        'buttons':['오늘','내일']
+        'type':'text'
     })
 
 @csrf_exempt
