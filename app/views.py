@@ -26,12 +26,7 @@ def answer(request):
         return JsonResponse({
                 'message': {
                     'text': today
-                },
-                'keyboard': {
-                    'type':'buttons',
-                    'buttons':['오늘','내일']
                 }
-
             })
 
     elif datacontent == '내일':
@@ -40,11 +35,6 @@ def answer(request):
         return JsonResponse({
                 'message': {
                     'text': tomorrow
-                },
-                'keyboard': {
-                    'type':'buttons',
-                    'buttons':['오늘','내일']
                 }
-
             })
 
