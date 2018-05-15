@@ -38,7 +38,7 @@ def answer(request):
                 }
             })
 
-    elif :
+    else :
         response = "잘못 입력."
 
         return JsonResponse({
