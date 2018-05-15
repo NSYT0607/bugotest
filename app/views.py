@@ -20,8 +20,8 @@ def answer(request):
     received_json_data = json.loads(json_str)
     datacontent = received_json_data['content']
 
-    if datacontent == '오늘':
-        today = "오늘 급식"
+    if datacontent == 'Comment tu t\'appelles?':
+        today = "Je m'appelle 상연."
 
         return JsonResponse({
                 'message': {
@@ -29,12 +29,22 @@ def answer(request):
                 }
             })
 
-    elif datacontent == '내일':
-        tomorrow = "내일 급식"
+    elif datacontent == 'Tu es d\'où?':
+        tomorrow = "Je suis de Séoul."
 
         return JsonResponse({
                 'message': {
                     'text': tomorrow
                 }
             })
+
+    else :
+        response = "잘못 입력."
+
+        return JsonResponse({
+                'message': {
+                    'text': response
+                }
+            })
+
 
