@@ -28,14 +28,6 @@ def answer(request):
                     'text': today
                 }
             })
-    elif datacontent == 'Comment tu t\'appelles?':
-        tomorrow = "Je m’appelle Eva."
-
-        return JsonResponse({
-                'message': {
-                    'text': tomorrow
-                }
-            })
     elif datacontent == 'Tu viens d\'où?':
         tomorrow = "Je suis de Paris."
 
@@ -45,7 +37,7 @@ def answer(request):
                 }
             })
     elif datacontent == 'Tu as quel âge?' :
-        tomorrow = "J’ai 18 ans"
+        tomorrow = "J’ai 18 ans."
 
         return JsonResponse({
                 'message': {
