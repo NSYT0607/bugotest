@@ -20,13 +20,14 @@ def answer(request):
     received_json_data = json.loads(json_str)
     datacontent = received_json_data['content']
     print(received_json_data)
+    score = 0
 
     if datacontent in ("Comment tu t'appelles?", "Comment tu t’appelles?", "Tu t'appelles comment?", "Tu t’appelles comment?"):
         today = "Je m’appelle Eva. "
-
+        score += 1
         return JsonResponse({
                 'message': {
-                    'text': today
+                    'text': today + '현재 누적 점수 {0}점!'.format(score)
                 }
             })
     elif datacontent in  ("Tu viens d'où?", "Tu viens d’où?", "Tu es d'où?", "Tu es d’où?"):
