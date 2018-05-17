@@ -19,9 +19,10 @@ def answer(request):
     json_str = ((request.body).decode('utf-8'))
     received_json_data = json.loads(json_str)
     datacontent = received_json_data['content']
+    print(received_json_data)
 
     if datacontent in ("Comment tu t'appelles?", "Comment tu t’appelles?", "Tu t'appelles comment?", "Tu t’appelles comment?"):
-        today = "Je m’appelle Eva."
+        today = "Je m’appelle Eva. "
 
         return JsonResponse({
                 'message': {
